@@ -12,15 +12,15 @@ struct Amiibo: Codable {
 
 // MARK: - AmiiboElement
 struct AmiiboElement: Codable {
-    let amiiboSeries: AmiiboSeries
+    let amiiboSeries: String
     let character: String
     let gameSeries: String?
     let head: String
     let image: String
     let name: String
-    let release: Release
+    let release: String
     let tail: String
-    let type: TypeEnum
+    let type: String
 }
 
 enum AmiiboSeries: String, Codable {
