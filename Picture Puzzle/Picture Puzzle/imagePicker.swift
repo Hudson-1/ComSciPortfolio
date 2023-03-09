@@ -28,7 +28,7 @@ struct ImagePicker: View {
                                  if let data = try? await newItem?.loadTransferable(type:Data.self){
                                      if let uiImage = UIImage(data: data) {
                                          if let croppedImage = cropSquare(uiImage){
-                                             if let resizedImage = resizeImage(image: croppedImage, targetSize: CGSize (width: 360, height: 260 )){
+                                             if let resizedImage = resizeImage(image: croppedImage, targetSize: CGSize (width: 360, height: 360 )){
                                                  
                                                  image = Image(uiImage: resizedImage)
                                                  imageData = resizedImage.pngData()
