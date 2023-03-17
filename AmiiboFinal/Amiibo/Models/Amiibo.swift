@@ -1,7 +1,9 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
 //
-//   let amiibo = try? JSONDecoder().decode(Amiibo.self, from: jsonData)
+//  ContentView.swift
+//  Amiibo
+//
+//  Created by Hudson Aibel on 1/24/23.
+//
 
 import Foundation
 
@@ -18,37 +20,9 @@ struct AmiiboElement: Codable {
     let head: String
     let image: String
     let name: String
-    let release: String
+    let release: Release
     let tail: String
     let type: String
-}
-
-enum AmiiboSeries: String, Codable {
-    case animalCrossing = "Animal Crossing"
-    case boxBoy = "BoxBoy!"
-    case chibiRobo = "Chibi-Robo!"
-    case diablo = "Diablo"
-    case fireEmblem = "Fire Emblem"
-    case kirby = "Kirby"
-    case legendOfZelda = "Legend Of Zelda"
-    case marioSportsSuperstars = "Mario Sports Superstars"
-    case megaMan = "Mega Man"
-    case metroid = "Metroid"
-    case monsterHunter = "Monster Hunter"
-    case monsterHunterRise = "Monster Hunter Rise"
-    case others = "Others"
-    case pikmin = "Pikmin"
-    case pokemon = "Pokemon"
-    case powerPros = "Power Pros"
-    case shovelKnight = "Shovel Knight"
-    case skylanders = "Skylanders"
-    case splatoon = "Splatoon"
-    case superMarioBros = "Super Mario Bros."
-    case superNintendoWorld = "Super Nintendo World"
-    case superSmashBros = "Super Smash Bros."
-    case the8BitMario = "8-bit Mario"
-    case yoshiSWoollyWorld = "Yoshi's Woolly World"
-    case yuGiOh = "Yu-Gi-Oh!"
 }
 
 // MARK: - Release

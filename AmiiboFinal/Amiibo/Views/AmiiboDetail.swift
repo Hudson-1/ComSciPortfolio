@@ -7,19 +7,36 @@ struct AmiiboDetail: View {
     var body: some View {
         if let amiiboDetail = amiiboDetail {
             VStack{
-                Text(amiiboDetail.name)
-                    .font(.title)
-                Text("Game Series: " + amiiboDetail.gameSeries!)
-                Divider()
-                AsyncImage(url: URL(string: amiiboDetail.image)) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                } placeholder: {
-                    Text("loading...")
+                VStack{
+                    HStack{
+                        Text(amiiboDetail.name)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.title)
+                        Image(systemName: "person")
+                    }
+                    Divider()
+                    Spacer()
+                    HStack{
+                        Text("Game Series: " + amiiboDetail.gameSeries!)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Image(systemName: "gamecontroller")
+                    }
+                    Divider()
                 }
-                Spacer()
+                .padding()
+                AsyncImage(url: URL(string: amiiboDetail.image)){image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                }placeholder: {
+                    ProgressView()
+                }
+                        .frame(width:500,height:500)
                 
+                Divider()
+                HStack{
+                    Text("Type of Amiibo: " + amiiboDetail.type)
+                    Image(systemName: "person.text.rectangle")
+                }
             }
         }
         else {
